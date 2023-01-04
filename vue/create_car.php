@@ -1,7 +1,7 @@
-<?php require "./phpTreatment/CreateCar.php"; ?>
+<?php require "../phpTreatment/CreateCar.php"; ?>
 
 
-<form action="/create_car.php" method="post">
+<form action="/create_car.php" method="POST">
   <label for="brand">Brand:</label><br>
   <input type="text" id="brand" name="brand"><br>
   <label for = "model">Model:</label><br>

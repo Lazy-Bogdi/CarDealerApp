@@ -1,5 +1,7 @@
 <?php
 
+require "./newCar.php";
+
 class MyDealerCrud {
   private $db;
 
