@@ -1,6 +1,6 @@
 <?php
 
-require "./newCar.php";
+require "newCar.php";
 
 class MyDealerCrud {
   private $db;
@@ -29,8 +29,7 @@ class MyDealerCrud {
   public function read($id) {
     $stmt = $this->db->prepare("SELECT * FROM cars WHERE id = ?");
     $stmt->execute([$id]);
-    $result = $stmt->get_result();
-    $carSpecs = $result->fetch_object();
+    $carSpecs = $stmt->fetchObject();   
 
     return new Car($carSpecs->brand, $carSpecs->model, $carSpecs->fuelType, $carSpecs->year,$carSpecs->kilometer,$carSpecs->price);
   }

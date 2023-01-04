@@ -36,6 +36,6 @@ class Car {
     public function getFuelType() { return $this->fuelType; }
     public function setFuelType($fuelType) { $this->fuelType = $fuelType; }
   
-    public function getPrice() { return $this->$price; }
-    public function setPrice($price) { $this->price = $fuelType; }
+    public function getPrice() { return $this->price; }
+    public function setPrice($price) { $this->price = $price; }
   }
