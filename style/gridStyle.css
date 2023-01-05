@@ -1,0 +1,44 @@
+/* Grid styles */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.grid-item {
+    background-color: white;
+    border: 1px solid lightgray;
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.2);
+    padding: 20px;
+}
+
+/* Pagination styles */
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.pagination a {
+    color: blue;
+    text-decoration: none;
+}
+
+/* Page numbers styles */
+.page-numbers {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0 0;
+}
+
+.page-numbers a {
+    color: black;
+    text-decoration: none;
+    /* margin-right: 10px; */
+    padding : 5px
+}
+
+.page-numbers .current-page {
+    font-weight: bold;
+    padding : 5px
+}

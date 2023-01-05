@@ -28,4 +28,4 @@ foreach ($rows as $row) {
      $i++;
 }
 
-var_dump($cars);
+// var_dump($cars);
