@@ -3,6 +3,8 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
+    flex-wrap: wrap;
+    margin : 300px 0 0 0;
 }
 
 .grid-item {
@@ -10,6 +12,10 @@
     border: 1px solid lightgray;
     box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.2);
     padding: 20px;
+}
+.grid-item img{
+    height: 200px;
+    width: 200px;
 }
 
 /* Pagination styles */

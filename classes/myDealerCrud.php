@@ -22,7 +22,7 @@ class MyDealerCrud {
         $price
     ]);
 
-    return new Car($brand, $model, $fuelType, $year, $kilometer, $price);
+    return 1;
   }
 
   // Lecture de la voiture par son id
@@ -31,23 +31,24 @@ class MyDealerCrud {
     $stmt->execute([$id]);
     $carSpecs = $stmt->fetchObject();   
 
-    return new Car($carSpecs->brand, $carSpecs->model, $carSpecs->fuelType, $carSpecs->year,$carSpecs->kilometer,$carSpecs->price);
+    return new Car($carSpecs->id, $carSpecs->brand, $carSpecs->model, $carSpecs->fuelType, $carSpecs->year,$carSpecs->kilometer,$carSpecs->price);
   }
 
   // Maj de la voiture
-  public function update($brand, $model, $fuelType, $year, $kilometer, $price) {
+  public function update($id,$brand, $model, $fuelType, $year, $kilometer, $price) {
 
-    $stmt = $this->db->prepare("UPDATE cars SET brand = ?, model = ?, year = ?, kilometer = ?, fuelType = ?, price = ?");
+    $stmt = $this->db->prepare("UPDATE cars SET brand = ?, model = ?, year = ?, kilometer = ?, fuelType = ?, price = ? WHERE id = ?");
     $stmt->execute([
         $brand,
         $model,
         $year,
         $kilometer,
         $fuelType,
-        $price
+        $price,
+        $id
     ]);
 
-    return new Car($brand, $model, $fuelType, $year, $kilometer, $price);
+    return 1;
   }
   // Supprimer une voiture
   public function delete($id) {

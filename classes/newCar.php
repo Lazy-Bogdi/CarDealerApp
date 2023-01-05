@@ -8,7 +8,8 @@ class Car {
     private $kilometer;
     private $price;
   
-    public function __construct($newBrand, $newModel, $newFuelType,$newYear,$newKilometer,$newPrice) {
+    public function __construct($newId,$newBrand, $newModel, $newFuelType,$newYear,$newKilometer,$newPrice) {
+      $this->id = $newId;
       $this->brand = $newBrand;
       $this->model = $newModel;
       $this->fuelType = $newFuelType;
